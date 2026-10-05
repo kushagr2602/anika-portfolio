@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anika Vashisht | People & Culture | Munich</title>
+  <meta name="description" content="Anika Vashisht: People & Culture at Allianz Technology, Master in Management (Rank 2/350) at EU Business School Munich. People analytics & AI."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 60px; }
+
+    :root {
+      --bg: #0e0e0f;
+      --line: #222226;
+      --text: #f2f2f3;
+      --muted: #a3a3ab;
+      --faint: #6b6b74;
+      --accent: #f4a582;
+      --chip: #18181b;
+    }
+
+    body { background: var(--bg); color: var(--text); font: 400 1rem/1.7 'Inter', system-ui, sans-serif; }
+    a { color: inherit; text-decoration: none; }
+    b { color: var(--text); font-weight: 600; }
+    .accent { color: var(--accent); }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 0 clamp(1.25rem, 5vw, 2rem); }
+
+    nav { position: fixed; inset: 0 0 auto; z-index: 10; background: rgba(14,14,15,0.85); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+    nav .wrap { max-width: 1100px; display: flex; justify-content: space-between; align-items: center; height: 56px; }
+    nav .logo { font-weight: 700; }
+    nav ul { display: flex; gap: 1.6rem; list-style: none; font-size: 0.9rem; color: var(--muted); }
+    nav ul a:hover { color: var(--text); }
+
+    section { padding: 6rem 0; border-top: 1px solid var(--line); }
+    .label { font-size: 1.05rem; font-weight: 700; letter-spacing: 0.02em; text-transform: uppercase; }
+    h2 { font-size: clamp(1.05rem, 2.6vw, 1.25rem); font-weight: 600; color: var(--accent); margin-bottom: 1.6rem; }
+    p.body { color: var(--muted); font-size: 1.05rem; max-width: 62ch; margin-bottom: 1.1rem; }
+
+    /* hero */
+    #top { min-height: 100vh; display: flex; align-items: center; border: 0; }
+    .avatar { width: 84px; height: 84px; border-radius: 50%; object-fit: cover; object-position: top; border: 2px solid var(--accent); margin-bottom: 1.6rem; }
+    h1 { font-size: clamp(3rem, 10vw, 5.2rem); font-weight: 500; line-height: 1.05; letter-spacing: -0.03em; }
+    .tagline { font-size: clamp(1.15rem, 3vw, 1.45rem); font-weight: 500; margin: 1rem 0 1.2rem; }
+    .hero-blurb { color: var(--muted); max-width: 46ch; font-size: 1.05rem; }
+    .loc { margin-top: 1.6rem; font-size: 1.35rem; font-weight: 500; }
+
+    /* chips */
+    .group { color: var(--faint); font-size: 0.85rem; margin: 1.4rem 0 0.55rem; }
+    .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .chips span { background: var(--chip); border: 1px solid var(--line); border-radius: 999px; padding: 0.3rem 0.85rem; font-size: 0.85rem; color: var(--muted); }
+
+    /* timeline */
+    .tl { position: relative; padding-left: 2.2rem; }
+    .tl::before { content: ''; position: absolute; left: 6px; top: 8px; bottom: 8px; width: 1px; background: var(--line); }
+    .tl-item { position: relative; padding-bottom: 2.4rem; transition: opacity 0.4s; }
+    .tl-item:last-child { padding-bottom: 0; }
+    .tl-item::before { content: ''; position: absolute; left: calc(-2.2rem + 1px); top: 0.45rem; width: 11px; height: 11px; border-radius: 50%; border: 2px solid var(--faint); background: var(--bg); transition: border-color 0.4s; }
+    .tl-item h3 { font-size: 1.18rem; font-weight: 600; }
+    .meta { color: var(--faint); font-size: 0.9rem; margin: 0.2rem 0 0.6rem; }
+    .meta span + span::before { content: ' · '; }
+    .tl-item ul { color: var(--muted); padding-left: 1.1rem; max-width: 62ch; }
+    .js .tl-item { opacity: 0.3; }
+    .js .tl-item.lit { opacity: 1; }
+    .tl-item.lit::before { border-color: var(--accent); }
+
+    /* big number */
+    .big { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.8rem; margin-bottom: 1.2rem; }
+    .big strong { color: var(--accent); font-size: clamp(3rem, 14vw, 5.5rem); line-height: 1; font-weight: 700; letter-spacing: -0.03em; }
+    .big span { color: var(--muted); font-size: 1.2rem; }
+    .roles { list-style: none; margin-top: 2rem; display: grid; gap: 1.2rem; }
+    .roles li { color: var(--muted); max-width: 62ch; }
+
+    /* contact */
+    #contact { text-align: center; }
+    #contact p.body { margin: 0 auto 2.2rem; }
+    .icons { display: flex; justify-content: center; flex-wrap: wrap; gap: 1.6rem; }
+    .icons a { color: var(--text); transition: color 0.15s, transform 0.15s; }
+    .icons a:hover { color: var(--accent); transform: translateY(-2px); }
+    .icons svg { width: 40px; height: 40px; display: block; }
+    footer { border-top: 1px solid var(--line); text-align: center; padding: 2rem; color: var(--faint); font-size: 0.85rem; }
+
+    /* reveal on scroll */
+    .js .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.7s, transform 0.7s; }
+    .js .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .js .reveal { transform: none; transition: none; } html { scroll-behavior: auto; } }
+
+    @media (max-width: 640px) {
+      nav ul { gap: 1rem; font-size: 0.8rem; }
+      nav ul li:nth-child(3) { display: none; }
+      section { padding: 4.5rem 0; }
+    }
+  </style>
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+  <nav>
+    <div class="wrap">
+      <a class="logo" href="#top">Anika <span class="accent">Vashisht</span></a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#leadership">Leadership</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section id="top">
+      <div class="wrap">
+        <img class="avatar reveal" src="photo.jpg" alt="Anika Vashisht"/>
+        <h1 class="reveal"><span class="accent">Anika</span> Vashisht</h1>
+        <p class="tagline reveal">People data by day. <span class="accent">Debater by heart.</span> 🎙️</p>
+        <p class="hero-blurb reveal">People &amp; Culture at Allianz Technology, turning talent data into decisions for the CEO and CPO offices, and automating HR workflows with applied AI.</p>
+        <p class="loc reveal">📍 <span class="accent">Munich,</span> Germany</p>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <p class="label reveal">About</p>
+        <h2 class="reveal">Scientist by training, people person by choice.</h2>
+        <p class="body reveal">I work in the <b>CPO area of Allianz Technology</b>, handling succession-planning and career-progression data requests that come straight from the <b>CEO and CPO offices</b>. My Master thesis applies <b>AI to automate the learning-data pipeline</b> end to end, cutting manual involvement by roughly 90%.</p>
+        <p class="body reveal">I'm completing a <b>Master in Management at EU Business School Munich</b>, ranked <b>2nd of 350</b>, as a <b>Deutschlandstipendium</b> scholar part-funded by Allianz SE. Before business school I studied Life Sciences in Delhi and worked in an oncology lab. Outside work I coach debaters, build communities, and switch between English, German, Hindi and Punjabi.</p>
+
+        <div class="reveal">
+          <p class="group">People &amp; Analytics</p>
+          <div class="chips"><span>People analytics</span><span>Succession planning</span><span>Talent data</span><span>Applied AI</span><span>Power BI</span><span>Excel</span><span>PowerPoint</span></div>
+          <p class="group">Ways of Working</p>
+          <div class="chips"><span>Project management</span><span>Executive communication</span><span>Coaching &amp; mentoring</span><span>Community building</span><span>Intercultural (IN / DE / US)</span></div>
+          <p class="group">Languages</p>
+          <div class="chips"><span>English · C1</span><span>German · B2</span><span>Hindi · Native</span><span>Punjabi · Native</span></div>
+          <p class="group">Certifications</p>
+          <div class="chips"><span>McKinsey Forward Program</span><span>Microsoft Power BI Data Analyst</span><span>Project Management (Google &amp; Microsoft)</span><span>Elements of AI</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="wrap">
+        <p class="label reveal">Experience</p>
+        <h2 class="reveal">Where I've worked</h2>
+        <div class="tl">
+          <div class="tl-item" data-start="2025-10">
+            <h3>L&amp;D Intern, CPO Area · <span class="accent">Allianz Technology</span></h3>
+            <p class="meta"><span>Oct 2025 - Present</span><span class="dur"></span><span>Munich</span></p>
+            <ul>
+              <li>Succession-planning data requests for executives and senior executives, from the CEO and CPO offices.</li>
+              <li>Learning-hours and career-progression analysis for talent-management decisions.</li>
+              <li>Learning-platform administration and forecasting for the group-wide L&amp;D budget.</li>
+            </ul>
+          </div>
+          <div class="tl-item" data-start="2024-09">
+            <h3>Master in Management · <span class="accent">EU Business School</span></h3>
+            <p class="meta"><span>Sep 2024 - Present</span><span class="dur"></span><span>Munich</span></p>
+            <ul><li>CGPA 3.87/4, rank 2 of 350. Deutschlandstipendium scholar (~1% of students in Germany).</li></ul>
+          </div>
+          <div class="tl-item" data-start="2025-05" data-end="2025-09">
+            <h3>Sales Advisor · <span class="accent">Boggi Milano</span></h3>
+            <p class="meta"><span>May 2025 - Sep 2025</span><span class="dur"></span></p>
+            <ul><li>Delivered 150% of sales targets in a customer-facing, high-trust role.</li></ul>
+          </div>
+          <div class="tl-item" data-start="2021-06" data-end="2024-05">
+            <h3>Research Assistant &amp; Project Lead · <span class="accent">University of Delhi</span></h3>
+            <p class="meta"><span>Jun 2021 - May 2024</span><span class="dur"></span><span>Delhi</span></p>
+            <ul><li>Led 12 undergraduate researchers; the only undergraduate in the oncology lab, improving data-processing time by ~30%. BSc Life Sciences, Ramjas College.</li></ul>
+          </div>
+          <div class="tl-item" data-start="2020-01" data-end="2021-10">
+            <h3>Assistant Marketing Manager · <span class="accent">Curbicus</span></h3>
+            <p class="meta"><span>Jan 2020 - Oct 2021</span><span class="dur"></span><span>New York</span></p>
+            <ul><li>Built Excel and Power BI campaign reports; grew organic traffic 40% and engagement 30%.</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="leadership">
+      <div class="wrap">
+        <p class="label reveal">Leadership</p>
+        <h2 class="reveal">Communities I've built</h2>
+        <div class="big reveal"><strong>100+</strong><span>member society, built from zero</span></div>
+        <p class="body reveal">I founded the Astronomy Society at Ramjas College, led a 17-person editorial team producing weekly newsletters, wrote its code of conduct, hosted the ISRO chairman and raised ₹50k in sponsorship.</p>
+        <ul class="roles">
+          <li class="reveal"><b>Head, Diplomacy &amp; Debating Club</b>, EU Business School. Coaching 5+ debaters for the European Youth Parliament in Strasbourg; A-level adjudicator, chaired 10+ tournaments.</li>
+          <li class="reveal"><b>Head of Equity</b>, Ramjas Debating Society. Set up equity committees across 5+ national tournaments.</li>
+          <li class="reveal"><b>Consulting Club</b>. Market-entry project for an Indian SME entering the German SaaS market.</li>
+          <li class="reveal"><b>Winner</b>, Dr. D.R. Singh Memorial Debate, 1st of 60 teams. <b>Published</b> “Exploring Nanoparticles in Human Body and Brain” (ISSN 2754-5008).</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <p class="label reveal">Contact</p>
+        <h2 class="reveal">Let's connect</h2>
+        <p class="body reveal">Whether it's people analytics, HR and AI, or a good debate motion, I'm always up for a conversation.</p>
+        <div class="icons reveal">
+          <a href="mailto:anikavashisht@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+          </a>
+          <a href="tel:+4915560689644" aria-label="Phone">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+          </a>
+          <a href="Anika_Vashisht_CV_PC.pdf" download aria-label="Download CV">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M12 12v6m-3-3 3 3 3-3"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Anika Vashisht</footer>
+
+  <script>
+    // durations: inclusive month count, "Present" = today
+    const now = new Date();
+    document.querySelectorAll('.tl-item').forEach(el => {
+      const [sy, sm] = el.dataset.start.split('-').map(Number);
+      const [ey, em] = el.dataset.end ? el.dataset.end.split('-').map(Number) : [now.getFullYear(), now.getMonth() + 1];
+      const m = (ey - sy) * 12 + (em - sm) + 1, y = Math.floor(m / 12), r = m % 12;
+      el.querySelector('.dur').textContent = [y && `${y} year${y > 1 ? 's' : ''}`, r && `${r} month${r > 1 ? 's' : ''}`].filter(Boolean).join(' ');
+    });
+
+    // fade-in once; timeline items light up after crossing the middle of the screen
+    const reveal = new IntersectionObserver((es, o) => es.forEach(e => e.isIntersecting && (e.target.classList.add('in'), o.unobserve(e.target))), { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(el => reveal.observe(el));
+    const lit = new IntersectionObserver(es => es.forEach(e => e.target.classList.toggle('lit', e.isIntersecting || e.boundingClientRect.top < 0)), { rootMargin: '0px 0px -45% 0px' });
+    document.querySelectorAll('.tl-item').forEach(el => lit.observe(el));
+  </script>
+</body>
+</html>
